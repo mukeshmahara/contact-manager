@@ -20,9 +20,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_04_180506) do
     t.string "email"
     t.string "phone_number"
     t.string "address"
-    t.string "company"
-    t.string "job_title"
-    t.date "birthday"
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

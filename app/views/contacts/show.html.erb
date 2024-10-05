@@ -1,0 +1,18 @@
+
+<div class="card my-3">
+    <div class="card-header">
+      <h2><%= fullname(@contact) %></h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Email:</strong> <%= @contact.email %></p>
+      <p><strong>Phone Number:</strong> <%= @contact.phone_number %></p>
+      <p><strong>Address:</strong> <%= @contact.address %></p>
+      <p><strong>Notes:</strong> <%= @contact.notes %></p>
+    </div>
+    <div class="card-footer text-end">
+      <%= link_to 'Edit', edit_contact_path(@contact), class: 'btn btn-outline-primary' %>
+      <%= link_to 'Delete', contact_path(@contact), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger' %>
+      <%= link_to 'Back to Contacts', contacts_path, class: 'btn btn-secondary' %>
+    </div>
+  </div>
+</div>

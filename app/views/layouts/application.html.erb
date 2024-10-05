@@ -9,8 +9,12 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
-    <%= yield %>
+    <%= display_toast(notice, :notice) %>
+    <%= display_toast(alert, :alert) %>
+      <h1 class="text-center border-bottom-0 bg-dark text-light"> Contact Manager App </h1>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>

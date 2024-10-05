@@ -1,0 +1,17 @@
+<tr>
+    <td><%= contact.id  %></td>
+    <td><%= fullname(contact)%></td>    
+    
+    <td><%= contact.email %></td>    
+    <td><%= contact.phone_number %></td>    
+    <td><%= contact.address %></td>    
+    <td>
+        <span class="d-flex justify-content-start ">
+            <%= link_to 'Show', contact_path(contact), class: 'btn me-2 btn-sm btn-outline-secondary' %>
+            <%= link_to 'Edit', edit_contact_path(contact), class: 'btn me-2 btn-sm btn-outline-primary' %>
+            <%= link_to 'Delete', contact_path(contact), 
+                class: 'btn me-2 btn-sm btn-outline-danger', 
+                data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+        </span>
+    </td>    
+</tr>
